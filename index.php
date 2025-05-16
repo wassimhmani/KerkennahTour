@@ -128,9 +128,25 @@
                                  <label>grilled fish</label>
                                  <select class="form-control z-9999" name="Any" id="fish">
                                     <option value="0">Any</option>
-                                    <option value="20">height quality</option>
-                                    <option value="15">middle quality</option>
-                                    <option value="10">economic quality</option>
+                                    <option value="20">
+                                    <span class="star" data-value="1">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="3">★</span>
+  <span class="star" data-value="4">★</span>
+  <span class="star" data-value="5">★</span>
+                                    </option>
+                                    <option value="15">
+                                    <span class="star" data-value="1">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="3">★</span>
+  
+                                    </option>
+                                    <option value="10">
+                                    <div id="star-rating" class="d-flex gap-1">
+  <span class="star" data-value="1">★</span>
+
+</div>
+                                    </option>
 
                                  </select>
                               </div>
@@ -560,15 +576,15 @@
                var sumextra = 0;
                var allextra = $("#extra").val();
                
-               var allextraLabel = $("#extra option:selected").map(function() {
+              /* var allextraLabel = $("#extra option:selected").map(function() {
                   return $(this).text(); // Get the text of the selected option
-               }).get(); // Convert jQuery object to an array
-               alert(allextraLabel[0]);
+               }).get(); // Convert jQuery object to an array*/
+               //alert(allextraLabel[0]);
                allextra.forEach(extra => {
                   sumextra += Number(extra);
-                  var $rows = $("#myTable tbody tr");
+                 // var $rows = $("#myTable tbody tr");
 
-                  $rows.eq(3).before("<tr><td>" + extra + "</td><td>" + extra + " DT</td><td>" + nb_personne + "</td><td>" + extra * nb_personne + " DT</td></tr>");
+                 // $rows.eq(3).before("<tr><td>" + extra + "</td><td>" + extra + " DT</td><td>" + nb_personne + "</td><td>" + extra * nb_personne + " DT</td></tr>");
 
                });
                
